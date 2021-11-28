@@ -1,9 +1,9 @@
 @extends('layout.app')
 @section('title')
     <div class="flex items-center w-12 ml-6">
-        {!!$icons[$books[0]->category_id-1]!!}
+        {!!$icons[$category->id-1]!!}
     </div>
-    {{$books[0]->category->category}}
+    {{$category->category}}
 @endsection
 
 @section('content')

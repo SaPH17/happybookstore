@@ -37,7 +37,8 @@ class AppServiceProvider extends ServiceProvider
                     '<i class="fas fa-ghost"></i>',
                     '<i class="fas fa-dragon"></i>',
                     '<i class="fas fa-atom"></i>',
-                    '<i class="fas fa-search"></i>'
+                    '<i class="fas fa-search"></i>',
+                    '<i class="fas fa-user"></i>'
                 ];
                 $view->with('icons', $icons);
             });

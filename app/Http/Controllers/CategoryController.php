@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -26,9 +27,11 @@ class CategoryController extends Controller
     public function show($id)
     {
         $books = Book::where('category_id', $id)->simplePaginate(15);
+        $category = Category::find($id);
+        if ($category) {
+            return view('category', compact('books', 'category'));
+        }
 
-        return view('category', compact('books'));
+        return redirect('/home');
     }
 }
-
-

@@ -34,8 +34,8 @@ class CategorySeeder extends Seeder
             'category' => 'Sci-Fi'
         ], [
             'category' => 'Crime'
+        ], [
+            'category' => 'Biography'
         ]]);
     }
 }
-
-
