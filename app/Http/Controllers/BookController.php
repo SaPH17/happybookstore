@@ -29,3 +29,5 @@ class BookController extends Controller
         return view('detail', compact('book'));
     }
 }
+
+

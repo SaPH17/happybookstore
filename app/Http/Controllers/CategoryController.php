@@ -28,10 +28,12 @@ class CategoryController extends Controller
     {
         $books = Book::where('category_id', $id)->simplePaginate(15);
         $category = Category::find($id);
-        if ($category) {
+        if($category){
             return view('category', compact('books', 'category'));
         }
 
         return redirect('/home');
     }
 }
+
+
